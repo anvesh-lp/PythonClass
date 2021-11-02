@@ -1,0 +1,9 @@
+from mmekni@newhaven.edu
+this is the text of email1
+from kaplan@nehvaen.edu
+this is the text of email2
+from: zqain@newhaven.edu
+this is the text of email3
+from: mycharger@gmail.com
+from:
+this is the text of email4
