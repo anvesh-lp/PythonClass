@@ -747,18 +747,47 @@
 # print(hasattr(Coutnter, "t"))
 
 #  ******************************************************************** https------------
-import ssl
-from urllib.request import urlopen
-
-ssl._create_default_https_context = ssl._create_unverified_context
-
-req = urlopen("https://www.youtube.com/")
-print(req.info().get('Link'))
-print(req.info().get('Date'))
-print(req.info().get('Content-Type'))
-print(req.info().keys())
+# import ssl
+# from urllib.request import urlopen
+#
+# ssl._create_default_https_context = ssl._create_unverified_context
+#
+# req = urlopen("https://www.youtube.com/")
+# print(req.info().get('Link'))
+# print(req.info().get('Date'))
+# print(req.info().get('Content-Type'))
+# print(req.info().keys())
 
 
 # print(req.getcode())
 
 
+# # ******************************************** GUI Programming ***************************************************
+
+
+import tkinter
+from tkinter.ttk import Button
+
+win = tkinter.Tk()
+win.title("This is my first window")
+print(help(tkinter.Canvas))
+can = tkinter.Canvas(win, bg="skyblue", width=1000, height=1000, bd=10)
+# tkinter.Canvas.create_polygon()
+color = "pink"
+
+can.create_text(400, 20, text="This is my first window")
+
+
+def changeColour(*args):
+    can.create_oval(500, 500, 40, 40, fill="pink")
+
+
+for j in range(10):
+    for i in range(20):
+        button1 = can.create_line(20+i, 50+j, 249, 210, fill="pink")
+
+can.bind('button1', "<Button-1>", changeColour)
+
+can.pack()
+
+win.mainloop()
