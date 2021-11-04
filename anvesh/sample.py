@@ -734,11 +734,6 @@
 #         Coutnter.t += 1
 #         self.mt += 1
 #
-# import ssl
-#
-# ssl._create_default_https_context = ssl._create_unverified_context
-# from urllib.request import  urlopen
-# print(open("http.html", "w+").write(str(urlopen("https://www.youtube.com/").read())))
 
 #
 # a = Coutnter()
@@ -750,5 +745,20 @@
 # print(b.mt)
 # print(Coutnter.t)
 # print(hasattr(Coutnter, "t"))
+
+#  ******************************************************************** https------------
+import ssl
+from urllib.request import urlopen
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
+req = urlopen("https://www.youtube.com/")
+print(req.info().get('Link'))
+print(req.info().get('Date'))
+print(req.info().get('Content-Type'))
+print(req.info().keys())
+
+
+# print(req.getcode())
 
 
