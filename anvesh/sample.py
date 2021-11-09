@@ -791,3 +791,36 @@ can.bind('button1', "<Button-1>", changeColour)
 can.pack()
 
 win.mainloop()
+
+
+class Project:
+    numProjs = 0
+
+    def __init__(self, name):
+        self.projName = name
+        Project.numProjs+=1
+
+    def setProjName(self, name):
+        self.projName = name
+
+    def getProjName(self):
+        return self.projName
+
+
+
+project1 = Project("Project 1")
+print(project1.getProjName())
+name=input("Enter the new name of the project for "+project1.getProjName())
+print("previous name"+project1.getProjName()+" After updating")
+project1.setProjName(name)
+print(project1.getProjName())
+
+project2=Project("New Project 2")
+project3=Project("New project 3")
+print(project2.getProjName())
+print(project3.getProjName())
+print("Total number of project instants created "+str(Project.numProjs))
+
+
+
+
