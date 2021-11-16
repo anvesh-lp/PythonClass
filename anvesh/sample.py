@@ -765,62 +765,76 @@
 # # ******************************************** GUI Programming ***************************************************
 
 
-import tkinter
-from tkinter.ttk import Button
-
-win = tkinter.Tk()
-win.title("This is my first window")
-print(help(tkinter.Canvas))
-can = tkinter.Canvas(win, bg="skyblue", width=1000, height=1000, bd=10)
-# tkinter.Canvas.create_polygon()
-color = "pink"
-
-can.create_text(400, 20, text="This is my first window")
-
-
-def changeColour(*args):
-    can.create_oval(500, 500, 40, 40, fill="pink")
-
-
-for j in range(10):
-    for i in range(20):
-        button1 = can.create_line(20+i, 50+j, 249, 210, fill="pink")
-
-can.bind('button1', "<Button-1>", changeColour)
-
-can.pack()
-
-win.mainloop()
-
-
-class Project:
-    numProjs = 0
-
-    def __init__(self, name):
-        self.projName = name
-        Project.numProjs+=1
-
-    def setProjName(self, name):
-        self.projName = name
-
-    def getProjName(self):
-        return self.projName
-
-
-
-project1 = Project("Project 1")
-print(project1.getProjName())
-name=input("Enter the new name of the project for "+project1.getProjName())
-print("previous name"+project1.getProjName()+" After updating")
-project1.setProjName(name)
-print(project1.getProjName())
-
-project2=Project("New Project 2")
-project3=Project("New project 3")
-print(project2.getProjName())
-print(project3.getProjName())
-print("Total number of project instants created "+str(Project.numProjs))
-
-
-
-
+# import tkinter
+# from tkinter.ttk import Button
+#
+# win = tkinter.Tk()
+# win.title("This is my first window")
+# print(help(tkinter.Canvas))
+# can = tkinter.Canvas(win, bg="skyblue", width=1000, height=1000, bd=10)
+# # tkinter.Canvas.create_polygon()
+# color = "pink"
+#
+# can.create_text(400, 20, text="This is my first window")
+#
+#
+# def changeColour(*args):
+#     can.create_oval(500, 500, 40, 40, fill="pink")
+#
+#
+# for j in range(10):
+#     for i in range(20):
+#         button1 = can.create_line(20+i, 50+j, 249, 210, fill="pink")
+#
+# can.bind('button1', "<Button-1>", changeColour)
+#
+# can.pack()
+#
+# win.mainloop()
+#
+#
+# class Project:
+#     numProjs = 0
+#
+#     def __init__(self, name):
+#         self.projName = name
+#         Project.numProjs+=1
+#
+#     def setProjName(self, name):
+#         self.projName = name
+#
+#     def getProjName(self):
+#         return self.projName
+#
+#
+#
+# project1 = Project("Project 1")
+# print(project1.getProjName())
+# name=input("Enter the new name of the project for "+project1.getProjName())
+# print("previous name"+project1.getProjName()+" After updating")
+# project1.setProjName(name)
+# print(project1.getProjName())
+#
+# project2=Project("New Project 2")
+# project3=Project("New project 3")
+# print(project2.getProjName())
+# print(project3.getProjName())
+# print("Total number of project instants created "+str(Project.numProjs))
+import time
+# import tkinter
+#
+# top = tkinter.Tk()
+# c = tkinter.Canvas(top, bg="ivory", width=190)
+# coord = 10, 50, 180, 180
+# arc6 = c.create_line(10, 10, 70, 90, width=10, fill="green")
+# arc = c.create_arc(coord, start=0, extent=90, fill="red")
+# arc2 = c.create_arc(coord, start=90, extent=90, fill="yellow")
+# arc3 = c.create_arc(coord, start=180, extent=90, fill="pink")
+# arc4 = c.create_arc(coord, start=270, extent=90, fill="blue")
+# l = [arc, arc2, arc3, arc4]
+# c.pack()
+# input("enter the loop")
+# c.delete(l[1])
+# c.delete(l[2])
+#
+# top.mainloop()
