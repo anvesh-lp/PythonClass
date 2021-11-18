@@ -855,44 +855,51 @@ import time
 # print(k(5))
 
 
-import tkinter as t
-
-x = 60
-y = 60
-
-
-def function1():
-    global x
-    x += 10
-    print("clicked"+str(x))
-
-
-
-def function2():
-    print("clicked")
-
-
-def function3():
-    print("clicked")
-
-
-def quit(event=None):
-    sys.exit()
-
-
-root = t.Tk()
-c = t.Canvas(root, width=400, height=400)
-c.pack()
-c.create_oval(x, y, 210, 210)
-b1 = t.Button(root, command=function1, height=10, width=10)
-b2 = t.Button(root, command=function2, height=10, width=10)
-b3 = t.Button(root, command=function3, height=10, width=10)
-b4 = t.Button(root, command=quit, height=10, width=10, text="Quit")
-
-# c= t.Canvas(root, width=400, height=400)
+# import tkinter as t
+#
+# x = 60
+# y = 60
+#
+#
+# def function1():
+#     global x
+#     x += 10
+#     print("clicked"+str(x))
+#
+#
+#
+# def function2():
+#     print("clicked")
+#
+#
+# def function3():
+#     print("clicked")
+#
+#
+# def quit(event=None):
+#     sys.exit()
+#
+#
+# root = t.Tk()
+# c = t.Canvas(root, width=400, height=400)
 # c.pack()
-b3.pack()
-b2.pack()
-b1.pack()
-b4.pack()
-t.mainloop()
+# c.create_oval(x, y, 210, 210)
+# b1 = t.Button(root, command=function1, height=10, width=10)
+# b2 = t.Button(root, command=function2, height=10, width=10)
+# b3 = t.Button(root, command=function3, height=10, width=10)
+# b4 = t.Button(root, command=quit, height=10, width=10, text="Quit")
+#
+# # c= t.Canvas(root, width=400, height=400)
+# # c.pack()
+# b3.pack()
+# b2.pack()
+# b1.pack()
+# b4.pack()
+# t.mainloop()
+# def modify(nun):
+#     nun.append(3)
+# l=[1,2]
+# modify(l)
+# print(l)
+
+
