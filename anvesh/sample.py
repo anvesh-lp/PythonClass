@@ -903,3 +903,15 @@ import time
 # print(l)
 
 
+import numpy as n
+
+c2 = n.random.randint(10, size=(3, 4))
+arr1, arr2 = n.array_split(c2, 2)
+
+print(c2)
+
+print("First two rows")
+print(arr1)
+
+print("remaining rowa")
+print(arr2)
